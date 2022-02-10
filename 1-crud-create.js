@@ -11,7 +11,13 @@ require('./configs/database.config');
 // .create() is a mongoose method and under the hood uses insertOne and insertMany
 
 // create one document in the cats collection
-Cat
+Cat.create({
+    name: "Garfield",
+    age: "13",
+    color: "orange",
+    
+    friends: ["Marco","Carol","Carlos"] //<---- this would brake the monotype since this property it's not in the schema. Mongo won't complain
+})
 
 // create multiple documents in the cats collection
 
